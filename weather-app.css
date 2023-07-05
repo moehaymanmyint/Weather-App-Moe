@@ -1,0 +1,146 @@
+body {
+    background-image: url('src/backgroundimage.jpg');
+}
+
+.weather {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid #C6B9CD;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-left: 400px;
+    margin-right: 400px;
+    background: linear-gradient(109.6deg, rgb(247, 202, 201) 20.6%, rgb(146, 168, 209) 85.9%);
+    font-family: 'Lora', serif;
+    color: #0B1F4F;
+}
+
+.search {
+    margin-left: 20px;
+}
+
+.search-icon {
+    border-radius: 20px;
+    border: 1px solid #C6B9CD;
+    color: #0B1F4F;
+}
+
+.current {
+    margin-right: 20px;
+    border: 1px solid #C6B9CD;
+    font-weight: bold;
+    color: #0B1F4F;
+}
+
+.city {
+    text-align: left;
+    margin-left: 25px;
+    padding-bottom: 10px;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.date-time {
+    margin-left: 100px;
+    padding-bottom: 10px;
+    s font-size: 20px;
+    font-weight: bold;
+}
+
+.weathertemperature {
+    border: 1px solid #C6B9CD;
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+    background: linear-gradient(178.6deg, rgb(232, 245, 253) 3.3%, rgb(252, 253, 255) 109.6%);
+}
+
+#celsius,
+#fahrenheit {
+    text-decoration: none;
+    font-size: smaller;
+}
+
+.description {
+    padding: 20px;
+}
+
+.icon-temperature {
+    font-size: 55px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.week {
+    text-align: left;
+    margin-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.weektemperature {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.card-title {
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.card-icon {
+    font-size: 25px;
+    margin: 0 auto;
+}
+
+.card-temperature {
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.card-description,
+.card-percent {
+    font-size: 18px;
+    margin: 0;
+    padding-bottom: 5px;
+    margin-top: 5px;
+}
+
+.card-body {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+    padding-bottom: 0;
+}
+
+.card {
+    color: #0B1F4F;
+    font-weight: bold;
+    background: linear-gradient(178.6deg, rgb(232, 245, 253) 3.3%, rgb(252, 253, 255) 109.6%);
+    transition: all 200ms ease-in-out;
+    box-shadow: 1px 1px 3px;
+    border-radius: 35px;
+}
+
+.card:hover {
+    background-color: white;
+    box-shadow: 5px 5px 10px;
+}
+
+footer {
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0B1F4F;
+}
+
+a {
+    color: #0B1F4F;
+}
