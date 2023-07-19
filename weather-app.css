@@ -4,14 +4,14 @@ body {
 
 .weather {
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     border: 1px solid #C6B9CD;
     border-radius: 20px;
     margin-top: 30px;
     margin-bottom: 15px;
-    margin-left: 400px;
-    margin-right: 400px;
+    margin-left: 370px;
+    margin-right: 370px;
     background: linear-gradient(109.6deg, rgb(247, 202, 201) 20.6%, rgb(146, 168, 209) 85.9%);
     font-family: 'Lora', serif;
     color: #0B1F4F;
@@ -37,16 +37,17 @@ body {
 .city {
     text-align: left;
     margin-left: 25px;
-    padding-bottom: 10px;
-    font-size: 40px;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    font-size: 45px;
     font-weight: bolder;
 }
 
 .date-time {
     margin-left: 100px;
-    padding-bottom: 10px;
-    s font-size: 20px;
-    font-weight: bold;
+    padding-bottom: 15px;
+    font-size: 25px;
+    font-weight: bolder;
 }
 
 .weathertemperature {
@@ -75,18 +76,10 @@ body {
     text-align: center;
 }
 
-.week {
-    text-align: left;
-    margin-left: 30px;
-    padding-top: 10px;
-    padding-bottom: 5px;
-    font-size: 35px;
-    font-weight: bold;
-}
-
 .weektemperature {
     margin-left: 10px;
     margin-right: 10px;
+    padding-top: 25px;
 }
 
 .card-title {

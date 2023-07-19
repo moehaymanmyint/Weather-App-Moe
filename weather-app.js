@@ -1,38 +1,22 @@
-// to cahnge current date
+function formatDate(times){
+  let date = new Date (times);
+  let hours = date.getHours();
+  if(hours < 10){
+    hours = `0${hours}`
+  }
+  let minutes = date.getMinutes();
+  if(minutes < 10){
+    minutes = `0${minutes}`
+  }
+  let days = ["Sunday", "Monday", "Tuesday", "Wendsday", "Thursday", "Friday", "Saturday"];
+  let day = days[date.getDay()];
+  let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  let month = months[date.getMonth()];
+  let dates = date.getDate();
 
-let current = new Date();
+  return `${day} <br> ${month} ${dates} | ${hours}:${minutes}`;
 
-let months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December"
-];
-let month = months[current.getMonth()];
-let date = current.getDate();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wendsday",
-  "Thursday",
-  "Friday",
-  "Saturday"
-];
-let day = days[current.getDay()];
-let hour = current.getHours();
-let minute = current.getMinutes();
-
-let dateTime = document.querySelector("#date-time");
-dateTime.innerHTML = `${day} <br> ${month} ${date} | ${hour}:${minute}`;
+}
 
 function showTemperature (response){
   document.querySelector("#city").innerHTML = response.data.name;
@@ -40,6 +24,8 @@ function showTemperature (response){
   document.querySelector("#description").innerHTML = response.data.weather[0].main;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
+  document.querySelector("#date-time").innerHTML = formatDate(response.data.dt * 1000);
+  document.querySelector("#icon").setAttribute("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 function search(city){
@@ -72,26 +58,5 @@ currentButton.addEventListener("click", getCurrentLocation);
 
 search("Yangon");
 
-//To change fahrenheit
-function changeCtoF(event) {
-  event.preventDefault();
-  let temp = 17;
-  let temperaure = document.querySelector("#tempNumber");
-  let fahrenheitTemp = Math.round((temp * 9) / 5 + 32);
-  temperaure.innerHTML = fahrenheitTemp;
-}
 
-let changeF = document.querySelector("#fahrenheit");
-changeF.addEventListener("click", changeCtoF);
-
-//To change celsius
-function changeFtoC(event) {
-  event.preventDefault();
-  let fahrenheitTemp = 63;
-  let celsiusTemp = Math.round(((fahrenheitTemp - 32) * 5) / 9);
-  let temperaure = document.querySelector("#tempNumber");
-  temperaure.innerHTML = celsiusTemp;
-}
-let changeC = document.querySelector("#celsius");
-changeC.addEventListener("click", changeFtoC);
 
