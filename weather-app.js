@@ -15,12 +15,12 @@ function formatDate(times){
   let dates = date.getDate();
 
   return `${day} <br> ${month} ${dates} | ${hours}:${minutes}`;
-
 }
 
 function showTemperature (response){
+  celsiusTemp = response.data.main.temp;
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#tempNumber").innerHTML = Math.round(response.data.main.temp);
+  document.querySelector("#tempNumber").innerHTML = Math.round(celsiusTemp);
   document.querySelector("#description").innerHTML = response.data.weather[0].main;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
@@ -42,6 +42,11 @@ function showCity(event) {
 let searchCity = document.querySelector("#search-city-icon");
 searchCity.addEventListener("click", showCity);
 
+let submit = document.querySelector("#submitControl");
+submit.addEventListener("submit", showCity);
+
+search("Yangon");
+
 function showCurrent(position){
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
@@ -56,7 +61,26 @@ function getCurrentLocation(event){
 let currentButton = document.querySelector("#currentButton");
 currentButton.addEventListener("click", getCurrentLocation);
 
-search("Yangon");
+function showFahrenheitTemp(event){
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#tempNumber");
+  let fahrenheitTemperature = (celsiusTemp * 9/5) + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function showCelsiusTemp(event){
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#tempNumber");
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
+}
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", showFahrenheitTemp);
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", showCelsiusTemp);
+
+let celsiusTemp = null;
 
 
 
