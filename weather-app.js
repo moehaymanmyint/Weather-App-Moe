@@ -17,6 +17,28 @@ function formatDate(times){
   return `${day} <br> ${month} ${dates} | ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecast = document.querySelector("#weather-forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML = forecastHTML + `
+      <div class="col">
+          <div class="card-body">
+            <h5 class="card-title"><strong>${day}</strong></h5>
+            <p class="card-icon">
+              <img src="https://openweathermap.org/img/wn/10n@2x.png" alt="" width="50"/>
+            </p>
+            <p class="card-temperature">18° 12°</p>
+          </div>
+      </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecast.innerHTML = forecastHTML;
+}
+
 function showTemperature (response){
   celsiusTemp = response.data.main.temp;
   document.querySelector("#city").innerHTML = response.data.name;
@@ -53,6 +75,7 @@ searchInput.addEventListener("keydown", function (event) {
 });
 
 search("Yangon");
+displayForecast();
 
 function showCurrent(position){
   let lat = position.coords.latitude;
