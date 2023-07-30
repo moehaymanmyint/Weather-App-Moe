@@ -22,7 +22,7 @@ function displayForecast(forecastData) {
   let forecastDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]; // Short day names
   let forecastHTML = `<div class="row">`;
 
-  forecastData.forEach(function (data, index) {
+  forecastData.slice(0, 6).forEach(function (data, index) { // Slice the array to get only the first 6 elements
     let day = forecastDay[index]; // Get the short day name based on the index
     let iconUrl = data.condition.icon_url;
     let minTemp = Math.round(data.temperature.minimum);
