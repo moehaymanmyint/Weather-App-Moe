@@ -17,12 +17,15 @@
 </head>
 
 <body>
+    <video autoplay muted loop id="myVideo">
+        <source src="src/cloud.mp4" type="video/mp4">
+    </video>
     <div class="weather">
         <span class="input-group mb-3" id="submitControl">
             <input type="search" placeholder="Search a location here..." class="form-control search" autofocus="on"
                 autocomplete="off" id="search-city-text">
             <button type="submit" value="search" class="btn btn-light search-icon" id="search-city-icon">
-                <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                <i class="fas fa-search"></i>
             </button>
             <button type="button" class="btn btn-light current" id="currentButton">Current</button>
         </span>
@@ -74,14 +77,15 @@
             </div>
         </div>
 
-        <div id="weather-forecast" class="forecast-container"></div>
+        <div id="weather-forecast">
+            <div class="forecast-row"></div>
+        </div>
     </div>
 
     <footer>
         <a href="https://github.com/moehaymanmyint/Weather-App-Moe" target="_blank">Open Source Code</a>
         by
-        <a href="https://www.instagram.com/moehaymanmyint/" target="_blank"> Moe Hay Man Myint</a>
-        
+        <a href="https://www.instagram.com/moehaymanmyint/" target="_blank">Moe Hay Man Myint</a> 
     </footer>
 
     <script src="weather-app.js"></script>
