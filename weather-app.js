@@ -35,7 +35,7 @@ function displayForecast(forecastData) {
           <p class="card-icon">
             <img src="${iconUrl}" alt="" width="50" />
           </p>
-          <p class="card-temperature"><strong>${maxTemp}° ${minTemp}°</strong></p>
+          <p class="card-temperature"><strong>${maxTemp}° </strong>${minTemp}°</p>
         </div>
       </div>`;
   });
