@@ -23,6 +23,11 @@
     color: #0B1F4F;
 }
 
+#search-city-text,
+#currentButton{
+    border-radius: 10px;
+}
+
 .search {
     margin-left: 20px;
 }
@@ -31,6 +36,12 @@
     border-radius: 20px;
     border: 1px solid #C6B9CD;
     color: #0B1F4F;
+}
+
+#search-city-icon{
+    border-radius: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .current {
@@ -66,15 +77,9 @@
     background: linear-gradient(to right, #7f92b4, #E0EAFC);
 }
 
-#celsius,
-#fahrenheit {
-    text-decoration: none;
-    font-size: smaller;
+#celsius {
+    font-size: x-small;
     color: #0B1F4F;
-}
-
-sup:hover {
-    text-decoration: underline;
 }
 
 .description {

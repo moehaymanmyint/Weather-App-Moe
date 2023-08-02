@@ -114,23 +114,3 @@ function showTemperature(response) {
   let currentButton = document.querySelector("#currentButton");
   currentButton.addEventListener("click", getCurrentLocation);
 
-  function showFahrenheitTemp(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#tempNumber");
-    let fahrenheitTemperature = (celsiusTemp * 9/5) + 32;
-    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-  }
-
-  function showCelsiusTemp(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#tempNumber");
-    temperatureElement.innerHTML = Math.round(celsiusTemp);
-  }
-
-  let fahrenheit = document.querySelector("#fahrenheit");
-  fahrenheit.addEventListener("click", showFahrenheitTemp);
-
-  let celsius = document.querySelector("#celsius");
-  celsius.addEventListener("click", showCelsiusTemp);
-
-  let celsiusTemp = null;
